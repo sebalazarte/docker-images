@@ -1,14 +1,14 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "IMAGE_NAME=apache-fedora"
-set "CONTAINER_NAME=apache"
-set "HOST_PORT=80"
-set "CONTAINER_PORT=80"
+set "IMAGE_NAME=apache-ssl"
+set "CONTAINER_NAME=apache-ssl-container"
+set "HOST_PORT=8443"
+set "CONTAINER_PORT=443"
 
-rem Resolve repository root (one level above this scripts folder)
+rem Work from the directory that contains both this script and the Dockerfile
 set "SCRIPT_DIR=%~dp0"
-pushd "%SCRIPT_DIR%.."
+pushd "%SCRIPT_DIR%"
 
 echo [INFO] Starting Docker automation script in %CD% ...
 
